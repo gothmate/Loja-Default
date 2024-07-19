@@ -4,12 +4,60 @@
   display: flex
   flex-direction: column
   min-height: 100vh
+  background: #313131
 
 .principal
-  width: 85vw
+  @include variables.flexStyle(space-between , center, none)
+  flex-wrap: wrap
+  gap: 1rem
+  width: 80vw
   flex: 1
   padding-block: 1rem
   margin: auto
+
+.card
+  @include variables.flexStyle(center, center, column)
+  width: 19.6rem
+  border-radius: 8px
+  border: solid #5a5a5a 2px
+  background: #5a5a5a
+.imgWrapper
+  width: 100%
+  height: 100%
+.textCard
+  @include variables.flexStyle(center, flex-start, column)
+  gap: 0.5rem
+  flex: 1
+  color: variables.$lightColor
+  padding: 1rem
+  font-size: 0.9rem
+  & span
+    margin-right: 2rem
+    font-weight: 700
+
+.cover
+  object-fit: cover
+
+.cartWidget
+  @include variables.flexStyle(center, center, column )
+  position: relative
+  gap: 1rem
+  width: 15rem
+  background: variables.$darkBackground
+  color: variables.$lightColor
+  
+
+.btn
+    background: variables.$lightColor
+    padding: 0.5rem 1rem 
+    border: none
+    color: variables.$darkBackground
+    border-radius: 5px
+    &:hover
+        cursor: pointer
+        filter: brightness(0.8)
+    &:active
+        box-shadow: inset -1px -1px 5px #000
 
 @media (hover: hover) and (pointer: fine) 
       
@@ -18,14 +66,17 @@
   
 
 /* Mobile */
-@media (max-width: 700px) 
+@media (max-width: 750px) 
   .content 
     padding: 4rem
   .principal
-    width: 90vw
+    width: 70vw
+    justify-content: center
  
 /* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) 
+@media (min-width: 751px) and (max-width: 1215px) 
+  .principal
+    width: 90vw
   
 
 @media (prefers-color-scheme: dark) 

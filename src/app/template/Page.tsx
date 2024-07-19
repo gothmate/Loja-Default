@@ -11,7 +11,7 @@ export interface IPageProps {
 export default function Page(props: IPageProps) {
     return (
         <div>
-            <main className={`${styles.main}`}>
+            <main className={styles.main}>
                 <Header />
                 {props.children}
                 <Footer />
