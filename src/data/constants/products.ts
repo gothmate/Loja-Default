@@ -37,6 +37,27 @@ const products: Product[] = [
         price: 2499.9,
         img: 'https://images.unsplash.com/photo-1590292339438-5fc3be7fca9d?q=80&w=1960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
+    {
+        id: 6,
+        name: 'Câmera Digital GHI',
+        description: 'Câmera digital com 20MP, zoom óptico de 10x e gravação de vídeo em 4K.',
+        price: 2499.9,
+        img: 'https://images.unsplash.com/photo-1590292339438-5fc3be7fca9d?q=80&w=1960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
+    {
+        id: 7,
+        name: 'Câmera Digital GHI',
+        description: 'Câmera digital com 20MP, zoom óptico de 10x e gravação de vídeo em 4K.',
+        price: 2499.9,
+        img: 'https://images.unsplash.com/photo-1590292339438-5fc3be7fca9d?q=80&w=1960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
+    {
+        id: 8,
+        name: 'Câmera Digital GHI',
+        description: 'Câmera digital com 20MP, zoom óptico de 10x e gravação de vídeo em 4K.',
+        price: 2499.9,
+        img: 'https://images.unsplash.com/photo-1590292339438-5fc3be7fca9d?q=80&w=1960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    },
 ]
 
 export default products
