@@ -1,0 +1,36 @@
+@use '../variables'
+
+.logo
+    @include variables.flexStyle(none, center, column)
+    color: white
+
+.cart
+    position: relative
+    color: white
+
+.letters
+    padding-top: .5rem
+    font-size: 1.1rem
+    line-height: .1rem
+
+.header
+    @include variables.flexStyle(space-between, center, none)
+    background: variables.$darkBackground
+    padding: 0.5rem 1.5rem
+
+.footer
+    @include variables.flexStyle(center, flex-end)
+    background: variables.$darkBackground
+    padding: 0.5rem 1.5rem
+    color: variables.$lightColor
+
+.numberBall
+    @include variables.flexStyle(center, center)
+    font-size: 0.6rem
+    position: absolute
+    background: variables.$redColor
+    border-radius: 50%
+    width: 16px
+    height: 15px
+    top: -3%
+    right: -3%

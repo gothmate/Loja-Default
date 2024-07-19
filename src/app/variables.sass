@@ -1,0 +1,14 @@
+$darkBackground: #474747
+$lightColor: #f7f7f7
+$redColor: #bb2020
+
+@mixin flexStyle($justify, $align, $direction: column)
+    display: flex
+    @if($justify != 'none')
+        justify-content: $justify
+    @if($align != 'none')
+        align-items: $align
+    @if($direction == 'none')
+        flex-direction: row
+    @else 
+        flex-direction: $direction
