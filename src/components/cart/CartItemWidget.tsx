@@ -19,6 +19,7 @@ export default function CartItemWidget(props: CartItemWidgetProps) {
                 <Image 
                     alt={props.item.product.name}
                     src={props.item.product.img}
+                    sizes="150 130"
                     fill
                     className={styles.cover}
                 />

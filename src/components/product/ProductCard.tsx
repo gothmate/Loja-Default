@@ -18,6 +18,7 @@ export default function ProductCard(props: ProductCardProps) {
                     alt={name}
                     width={310}
                     height={200}
+                    priority
                     className={styles.cover}
                 />
             </div>

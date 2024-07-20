@@ -1,7 +1,8 @@
 'use client'
-import { createContext, useState } from "react"
+import { createContext, useEffect, useState } from "react"
 import CartItem from "../model/CartItem"
 import { Product } from "../model/Product"
+import useLocalStorage from "../hooks/useLocalStorage"
 
 interface CartContextProps {
     items: CartItem[]
@@ -14,16 +15,17 @@ const CartContext = createContext<CartContextProps>({} as any)
 
 export function CartProvider(props: any) {
     const [items, setItems] = useState<CartItem[]>([])
+    const { get, set, remove } = useLocalStorage()
 
     function add(product: Product) {
         const index = items.findIndex((i) => i.product.id === product.id)
 
         if(index === -1) {
-            setItems([...items, {product, quantity: 1}])
+            changeItems([...items, {product, quantity: 1}])
         } else {
             const newItems = [...items]
             newItems[index].quantity++
-            setItems(newItems)
+            changeItems(newItems)
         }
     }
 
@@ -38,9 +40,21 @@ export function CartProvider(props: any) {
                 newItems.splice(index, 1)
             }
 
-            setItems(newItems)
+            changeItems(newItems)
         }
     }
+
+    function changeItems(newItems: CartItem[]) {
+        setItems(newItems)
+        set('cart', newItems)
+    }
+
+    useEffect(() => {
+        const cart = get('cart')
+        if(cart !== null) {
+            setItems(cart)
+        }
+    }, [get])
 
     return (
         <CartContext.Provider value={{
