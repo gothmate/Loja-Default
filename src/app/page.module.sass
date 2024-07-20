@@ -9,11 +9,9 @@
 .principal
   @include variables.flexStyle(space-between , center, none)
   flex-wrap: wrap
-  gap: 1rem
   width: 80vw
   flex: 1
-  padding-block: 1rem
-  margin: auto
+  margin: 1rem auto
 
 .card
   @include variables.flexStyle(center, center, column)
@@ -37,16 +35,7 @@
 
 .cover
   object-fit: cover
-
-.cartWidget
-  @include variables.flexStyle(center, center, column )
-  position: relative
-  gap: 1rem
-  width: 15rem
-  background: variables.$darkBackground
-  color: variables.$lightColor
   
-
 .btn
     background: variables.$lightColor
     padding: 0.5rem 1rem 
@@ -57,7 +46,7 @@
         cursor: pointer
         filter: brightness(0.8)
     &:active
-        box-shadow: inset -1px -1px 5px #000
+        box-shadow: inset -2px -2px 3px #000
 
 @media (hover: hover) and (pointer: fine) 
       
@@ -67,12 +56,11 @@
 
 /* Mobile */
 @media (max-width: 750px) 
-  .content 
-    padding: 4rem
   .principal
     width: 70vw
     justify-content: center
- 
+    gap: 1rem
+     
 /* Tablet and Smaller Desktop */
 @media (min-width: 751px) and (max-width: 1215px) 
   .principal
