@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Esse projeto é um projeto para uma Loja padrão para ser usado como base para qualquer dev.
 
-## Getting Started
+**Como Utilizar o projeto:**
 
-First, run the development server:
+ - Clonar o repositório
+ - Instalar as dependências (npm install)
+ - Realizar as mudanças na branch dev (git checkout dev)
+ - Fazer o commit da mudança 
+    - git add .
+    - git commit -m "descrição do commit"
+ - Copiar o hash do log do commit (git log)
+ - mudar para a branch main (git checkout main)
+ - Puxar o commit para a branch (git cherry-pick <colar a hash do log>)
+ - Realizar o build (git run build)
+ - Testar a build (npm start)
+ - Alterar a versão no arquivo package.json
+ - Commitar a mudança na main
+ - Criar a versão: (git checkout -M version/<numero da versão>)
+ - Buildar a versão e realizar o deploy no serviço escolhido
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+ Esse projeto utiliza o pré-processador sass no lugar do TailwindCss, o que permite o uso de algumas condicionais interessantes. Bons projeto para todos.
