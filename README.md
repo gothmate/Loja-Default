@@ -15,7 +15,7 @@ Esse projeto é um projeto para uma Loja padrão para ser usado como base para q
  - Testar a build (npm start)
  - Alterar a versão no arquivo package.json
  - Commitar a mudança na main
- - Criar a versão: (git checkout -M version/<numero da versão>)
+ - Criar a versão: (git checkout -B version/<numero da versão>)
  - Buildar a versão e realizar o deploy no serviço escolhido
 
  Esse projeto utiliza o pré-processador sass no lugar do TailwindCss, o que permite o uso de algumas condicionais interessantes. Bons projeto para todos.
