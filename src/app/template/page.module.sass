@@ -4,8 +4,19 @@
     @include variables.flexStyle(none, center, column)
     color: white
 
+.stickyCart
+    @include variables.flexStyle(center, center , none )
+    position: fixed
+    width: 3rem
+    height: 3rem
+    background: variables.$darkBackground
+    right: 1rem
+    top: 0.5rem
+    border-radius: 50%
+    
+
 .cart
-    position: relative
+    position: sticky
     color: white
 
 .letters
@@ -17,6 +28,7 @@
     @include variables.flexStyle(space-between, center, none)
     background: variables.$darkBackground
     padding: 0.5rem 1.5rem
+    min-height: 3.5rem
 
 .footer
     @include variables.flexStyle(center, flex-end)
