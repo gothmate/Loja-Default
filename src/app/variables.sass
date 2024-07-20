@@ -12,3 +12,19 @@ $redColor: #bb2020
         flex-direction: row
     @else 
         flex-direction: $direction
+
+@mixin chooser($type)
+    @include flexStyle(center, center, row)
+    width: 1.5rem
+    height: 1.5rem
+    background: $lightColor
+    color: $darkBackground
+    border: none
+    @if($type == 'minus')
+        border-radius: 5px 0 0 5px
+    @else
+        border-radius: 0 5px 5px 0
+    &:hover
+        filter: brightness(0.8)
+    &:active
+        box-shadow: inset -1px -1px 5px #000

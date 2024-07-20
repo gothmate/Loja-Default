@@ -6,7 +6,8 @@ import { Product } from "../model/Product"
 interface CartContextProps {
     items: CartItem[]
     itemQuantity: number
-    add?: (item: Product) => void
+    add: (item: Product) => void
+    sub: (item: Product) => void
 }
 
 const CartContext = createContext<CartContextProps>({} as any)
@@ -26,10 +27,26 @@ export function CartProvider(props: any) {
         }
     }
 
+    function sub(product: Product) {
+        const index = items.findIndex((i) => i.product.id === product.id)
+
+        if(index !== -1) {
+            const newItems = [...items]
+            newItems[index].quantity--
+
+            if(newItems[index].quantity === 0) {
+                newItems.splice(index, 1)
+            }
+
+            setItems(newItems)
+        }
+    }
+
     return (
         <CartContext.Provider value={{
                 items,
                 add,
+                sub,
                 get itemQuantity() {
                     return items.reduce((total, item) => total + item.quantity, 0)
                 }

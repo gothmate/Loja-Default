@@ -3,10 +3,11 @@ import Page from "../../template/Page"
 import styles from '@/app/page.module.sass'
 import CartItemWidget from "@/components/cart/CartItemWidget"
 import useCart from "@/data/hooks/usecart"
+import { useEffect } from "react"
 
 export default function CartPage() {
     
-    const { items, itemQuantity, add } = useCart()
+    const { items, itemQuantity } = useCart()
 
     return (
         <Page>
@@ -14,6 +15,7 @@ export default function CartPage() {
                 {items.map((item) => (
                     <CartItemWidget key={item.product.id} item={item} />
                 ))}
+                <button className={styles.btn}>Checkout</button>
             </div>
         </Page>
     )
