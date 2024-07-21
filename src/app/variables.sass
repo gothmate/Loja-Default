@@ -1,6 +1,18 @@
 $darkBackground: #474747
 $lightColor: #fafafa
-$redColor: #bb2020
+$redColor: #f15454
+
+@mixin button()
+    background: $lightColor
+    padding: 0.5rem 1rem 
+    border: none
+    color: $darkBackground
+    border-radius: 5px
+    &:hover
+        cursor: pointer
+        filter: brightness(0.8)
+    &:active
+        box-shadow: inset 2px 2px 3px #000
 
 @mixin flexStyle($justify, $align, $direction: column)
     display: flex

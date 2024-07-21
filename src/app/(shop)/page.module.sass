@@ -1,0 +1,36 @@
+@use '../variables'
+
+.mainLogin
+  @include variables.flexStyle(space-between, center, none)
+  width: 100vw
+  height: 100vh
+.aside
+  @include variables.flexStyle(center, center, none)
+  background: variables.$lightColor
+  height: 100vh
+  color: variables.$redColor
+  width: 60vw
+.form
+  @include variables.flexStyle(center, center, column)
+  width: 40vw
+  height: 100vh
+  background: variables.$darkBackground
+  gap: 1rem
+.formLogin
+  @include variables.flexStyle(center, center, column)
+  gap: 1rem
+  width: 80%
+  height: fit-content
+  & .btn
+    @include variables.button()
+    font-size: 1rem
+    width: 100%
+
+.checkboxGroup
+  display: flex
+  width: 100%
+  justify-content: flex-start
+  gap: 1rem
+
+.hiddenAlert
+  color: variables.$redColor
