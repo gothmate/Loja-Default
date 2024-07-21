@@ -1,4 +1,3 @@
-import { IconBrandAmazon } from "@tabler/icons-react";
 import Link from "next/link";
 import style from './page.module.sass'
 

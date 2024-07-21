@@ -43,18 +43,15 @@
 
 .cover
   object-fit: cover
+
+.input
+  @include variables.flexStyle(space-between, center, column)
+  width: 100%
+  gap: 2rem
+  padding: 0.5rem 1rem
   
 .btn
-    background: variables.$lightColor
-    padding: 0.5rem 1rem 
-    border: none
-    color: variables.$darkBackground
-    border-radius: 5px
-    &:hover
-        cursor: pointer
-        filter: brightness(0.8)
-    &:active
-        box-shadow: inset -2px -2px 3px #000
+  @include variables.button()
 
 @media (hover: hover) and (pointer: fine) 
       
