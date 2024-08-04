@@ -1,9 +1,10 @@
 'use client'
 import styles from '@/app/page.module.sass'
-import style from '../page.module.sass'
+import style from '../../page.module.sass'
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
 import Auth from '@/data/model/Auth'
 import Link from 'next/link'
+import Sign from '../page'
 
 export default function Signup() {
 
@@ -76,28 +77,54 @@ export default function Signup() {
     }, [repeatPwd, password])
 
     return (
-        <main className={style.mainLogin}>
-            <aside className={style.aside}>
-                <h1>LOGO</h1>
-            </aside>
-            <form className={style.form} onSubmit={e => handleSubmit(e)}>
+        <Sign>
+            <form className={style.form} onSubmit={(e) => handleSubmit(e)}>
                 <div className={style.formLogin}>
-                    <input className={styles.input} type="text" placeholder="Nome Completo" onChange={e => handleName(e)} />
-                    <input className={styles.input} type="text" placeholder="E-mail" onChange={e => handleEmail(e)} />
-                    <input className={styles.input} type="text" placeholder="Usuário" onChange={e => handleUsername(e)} />
-                    <input className={styles.input} type={showPassword} placeholder="Senha" onChange={e => handlePassword(e)} />
-                    <input className={styles.input} type={showPassword} placeholder="Repetir Senha" onChange={e => handleRepeatPwd(e)} />
+                    <input
+                        className={styles.input}
+                        type='text'
+                        placeholder='Nome Completo'
+                        onChange={(e) => handleName(e)}
+                    />
+                    <input
+                        className={styles.input}
+                        type='text'
+                        placeholder='E-mail'
+                        onChange={(e) => handleEmail(e)}
+                    />
+                    <input
+                        className={styles.input}
+                        type='text'
+                        placeholder='Usuário'
+                        onChange={(e) => handleUsername(e)}
+                    />
+                    <input
+                        className={styles.input}
+                        type={showPassword}
+                        placeholder='Senha'
+                        onChange={(e) => handlePassword(e)}
+                    />
+                    <input
+                        className={styles.input}
+                        type={showPassword}
+                        placeholder='Repetir Senha'
+                        onChange={(e) => handleRepeatPwd(e)}
+                    />
                     <div className={style.checkboxGroup}>
-                        <input className={style.checkbox} type="checkbox" onChange={handleShowPassword} /> 
+                        <input
+                            className={style.checkbox}
+                            type='checkbox'
+                            onChange={handleShowPassword}
+                        />
                         <label>Mostrar a Senha</label>
                     </div>
                     <div className={style.hiddenAlert} hidden={hidden}>
                         <p>As senhas precisam ser iguais.</p>
                     </div>
-                    <input className={style.btn} type="submit" value="Logar" />
+                    <input className={style.btn} type='submit' value='Logar' />
                     <Link href={'/signin'}>Voltar para a tela de login</Link>
                 </div>
             </form>
-        </main>
-    )
+        </Sign>
+    );
 }
