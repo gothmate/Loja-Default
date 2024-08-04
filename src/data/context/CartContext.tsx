@@ -3,13 +3,7 @@ import { createContext, useEffect, useState } from "react"
 import CartItem from "../model/CartItem"
 import { Product } from "../model/Product"
 import useLocalStorage from "../hooks/useLocalStorage"
-
-interface CartContextProps {
-    items: CartItem[]
-    itemQuantity: number
-    add: (item: Product) => void
-    sub: (item: Product) => void
-}
+import { CartContextProps } from "../model/CartContextProps"
 
 const CartContext = createContext<CartContextProps>({} as any)
 

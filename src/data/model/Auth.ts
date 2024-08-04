@@ -5,4 +5,5 @@ export default interface Auth {
     fullName: string
     admin: boolean
     employee: boolean
+    isLoggedIn: boolean
 }
