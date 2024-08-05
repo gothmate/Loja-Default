@@ -1,0 +1,26 @@
+@use '../../variables'
+
+.checkout
+  min-height: calc(100vh - 90px)
+  padding-inline: 2rem
+  padding-top: 2rem
+
+.produto
+  @include variables.flexStyle(space-between, center , row)
+
+.price
+  @include variables.flexStyle(space-between, center , row )
+  gap: 1rem
+  width: 30rem 
+  
+.groupCheckout
+  width: 100%
+  padding-block: 0.5rem
+
+.total
+  margin-top: 2rem
+  width: 100%
+  text-align: right
+  & span
+    font-size: 1.3rem
+    color: variables.$totalColor
